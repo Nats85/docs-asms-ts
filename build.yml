@@ -1,0 +1,26 @@
+trigger: none
+
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: Docs/aranda-docs
+    ref: refs/heads/master
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+- group: Site
+
+steps:
+- checkout: self
+  fetchDepth: 1
+
+- template: templates/build-steps.yml@templates
+
+- template: templates/deployment-steps.yml@templates
+  parameters:
+    AzureSubscription: $(Site.ServiceConnection)
+    StorageAccount: $(Site.StorageAccountName)
+    SiteFolder: $(siteFolder)
