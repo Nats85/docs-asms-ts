@@ -2,6 +2,13 @@
 title: Troubleshooting
 chapter: "trouble_shooting"
 ---
+
+<iframe
+  src="https://codepen.io/team/codepen/embed/preview/PNaGbb](https://aes-supporchart-node.azurewebsites.net/"
+  style="width:100%; height:300px;"
+></iframe>
+
+
 ## 9.3.6.15: 
 
 Se solucionan los siguientes problemas:
